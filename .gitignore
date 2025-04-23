@@ -7,6 +7,7 @@ fstring/tests/fmemcpy.X/nbproject/Makefile-genesis.properties
 fstring/tests/fmemcpy.X/nbproject/Makefile-impl.mk
 fstring/tests/fmemcpy.X/nbproject/Makefile-local-default.mk
 fstring/tests/fmemcpy.X/nbproject/Makefile-variables.mk
+
 fstring/tests/fmemmove.X/dist/
 fstring/tests/fmemmove.X/debug/
 fstring/tests/fmemmove.X/build/
@@ -16,3 +17,33 @@ fstring/tests/fmemmove.X/nbproject/Makefile-genesis.properties
 fstring/tests/fmemmove.X/nbproject/Makefile-impl.mk
 fstring/tests/fmemmove.X/nbproject/Makefile-local-default.mk
 fstring/tests/fmemmove.X/nbproject/Makefile-variables.mk
+
+fstring/tests/fmemset.X/dist/
+fstring/tests/fmemset.X/debug/
+fstring/tests/fmemset.X/build/
+fstring/tests/fmemset.X/nbproject/private/
+fstring/tests/fmemset.X/nbproject/Makefile-default.mk
+fstring/tests/fmemset.X/nbproject/Makefile-genesis.properties
+fstring/tests/fmemset.X/nbproject/Makefile-impl.mk
+fstring/tests/fmemset.X/nbproject/Makefile-local-default.mk
+fstring/tests/fmemset.X/nbproject/Makefile-variables.mk
+
+fstring/tests/fmemcmp.X/dist/
+fstring/tests/fmemcmp.X/debug/
+fstring/tests/fmemcmp.X/build/
+fstring/tests/fmemcmp.X/nbproject/private/
+fstring/tests/fmemcmp.X/nbproject/Makefile-default.mk
+fstring/tests/fmemcmp.X/nbproject/Makefile-genesis.properties
+fstring/tests/fmemcmp.X/nbproject/Makefile-impl.mk
+fstring/tests/fmemcmp.X/nbproject/Makefile-local-default.mk
+fstring/tests/fmemcmp.X/nbproject/Makefile-variables.mk
+
+# fstring/tests/fmemchr.X/dist/
+# fstring/tests/fmemchr.X/debug/
+# fstring/tests/fmemchr.X/build/
+# fstring/tests/fmemchr.X/nbproject/private/
+# fstring/tests/fmemchr.X/nbproject/Makefile-default.mk
+# fstring/tests/fmemchr.X/nbproject/Makefile-genesis.properties
+# fstring/tests/fmemchr.X/nbproject/Makefile-impl.mk
+# fstring/tests/fmemchr.X/nbproject/Makefile-local-default.mk
+# fstring/tests/fmemchr.X/nbproject/Makefile-variables.mk
