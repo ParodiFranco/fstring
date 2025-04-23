@@ -15,7 +15,7 @@ void teardown(void) {
 }
 
 /* test group --------------------------------------------------------------*/
-TEST_GROUP("fstring") {
+TEST_GROUP("fmemcmp") {
 
 TEST("Different data, size = 0 test (passing)") {
 	int dif = fmemcmp("hola", "wwww", 0);

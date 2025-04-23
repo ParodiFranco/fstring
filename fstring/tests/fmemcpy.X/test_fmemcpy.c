@@ -15,16 +15,16 @@ void teardown(void) {
 }
 
 /* test group --------------------------------------------------------------*/
-TEST_GROUP("fstring") {
+TEST_GROUP("fmemcpy") {
 
-TEST("fmemcpy: size = 0 test (passing)") {
+TEST("Size = 0 test (passing)") {
     char buf[5] = "....";
 	fmemcpy(buf, "hola", 0);
 	
 	VERIFY(memcmp(buf, "....", sizeof(buf)) == 0);
 }
 
-TEST("fmemcpy: size = 2 test (passing)") {
+TEST("Size = 2 test (passing)") {
 	char buf[5] = "....";
 	fmemcpy(buf, "hola", 2);
 	
