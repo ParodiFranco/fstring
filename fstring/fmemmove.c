@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ******************************************************************************/
 #include <xc.h>
-#include "fstring.h"
 
 void *fmemmove (void *dest, const void *src, size_t size){
 	FSR0 = (uintptr_t) src;

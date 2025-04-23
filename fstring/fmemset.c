@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ******************************************************************************/
 #include <xc.h>
-#include "fstring.h"
 
 void *fmemset (void *buf, int c, size_t cnt){
 	volatile char byte = (char) c;
