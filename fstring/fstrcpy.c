@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ******************************************************************************/
 #include <xc.h>
-#include "fstring.h"
 
 char *fstrcpy (char *__restrict dest, const char *__restrict src){
 	FSR0 = (uintptr_t) src;

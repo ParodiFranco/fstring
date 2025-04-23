@@ -22,7 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ******************************************************************************/
 #include <xc.h>
-#include "fstring.h"
 
 size_t fstrlen(const char *string){
 	FSR0 = (uintptr_t) string;
