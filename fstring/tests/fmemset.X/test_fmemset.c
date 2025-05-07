@@ -15,16 +15,16 @@ void teardown(void) {
 }
 
 /* test group --------------------------------------------------------------*/
-TEST_GROUP("fstring") {
+TEST_GROUP("fmemset") {
 
-TEST("fmemset: cnt = 0 test (passing)") {
+TEST("cnt = 0 test (passing)") {
     char buf[5] = "....";
 	fmemset(buf, 'a', 0);
 	
 	VERIFY(memcmp(buf, "....", sizeof(buf)) == 0);
 }
 
-TEST("fmemset: cnt = 2 test (passing)") {
+TEST("cnt = 2 test (passing)") {
 	char buf[5] = "....";
 	fmemset(buf, 'a', 2);
 	
