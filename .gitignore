@@ -47,3 +47,13 @@ fstring/tests/fmemchr.X/nbproject/Makefile-genesis.properties
 fstring/tests/fmemchr.X/nbproject/Makefile-impl.mk
 fstring/tests/fmemchr.X/nbproject/Makefile-local-default.mk
 fstring/tests/fmemchr.X/nbproject/Makefile-variables.mk
+
+fstring/tests/fstrlen.X/dist/
+fstring/tests/fstrlen.X/debug/
+fstring/tests/fstrlen.X/build/
+fstring/tests/fstrlen.X/nbproject/private/
+fstring/tests/fstrlen.X/nbproject/Makefile-default.mk
+fstring/tests/fstrlen.X/nbproject/Makefile-genesis.properties
+fstring/tests/fstrlen.X/nbproject/Makefile-impl.mk
+fstring/tests/fstrlen.X/nbproject/Makefile-local-default.mk
+fstring/tests/fstrlen.X/nbproject/Makefile-variables.mk
