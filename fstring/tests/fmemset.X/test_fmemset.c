@@ -19,16 +19,18 @@ TEST_GROUP("fmemset") {
 
 TEST("cnt = 0 test (passing)") {
     char buf[5] = "....";
-	fmemset(buf, 'a', 0);
+	char *p = fmemset(buf, 'a', 0);
 	
 	VERIFY(memcmp(buf, "....", sizeof(buf)) == 0);
+	VERIFY(p == buf);
 }
 
 TEST("cnt = 2 test (passing)") {
 	char buf[5] = "....";
-	fmemset(buf, 'a', 2);
+	char *p = fmemset(buf, 'a', 2);
 	
 	VERIFY(memcmp(buf, "aa..", sizeof(buf)) == 0);
+	VERIFY(p == buf);
 }
 
 }
