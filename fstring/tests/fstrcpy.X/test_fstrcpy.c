@@ -15,21 +15,21 @@ void teardown(void) {
 }
 
 /* test group --------------------------------------------------------------*/
-TEST_GROUP("fmemcpy") {
+TEST_GROUP("fstrcpy") {
 
-TEST("Size = 0 test (passing)") {
+TEST("string = \"\\0\" test (passing)") {
     char buf[5] = "....";
-	char *p = fmemcpy(buf, "hola", 0);
+	char *p = fstrcpy(buf, "\0");
 	
-	VERIFY(memcmp(buf, "....", sizeof(buf)) == 0);
+	VERIFY(memcmp(buf, "\0...", sizeof(buf)) == 0);
 	VERIFY(p == buf);
 }
 
-TEST("Size = 2 test (passing)") {
+TEST("string = \"ho\\0\" test (passing)") {
 	char buf[5] = "....";
-	char *p = fmemcpy(buf, "hola", 2);
+	char *p = fstrcpy(buf, "ho");
 	
-	VERIFY(memcmp(buf, "ho..", sizeof(buf)) == 0);
+	VERIFY(memcmp(buf, "ho\0.", sizeof(buf)) == 0);
 	VERIFY(p == buf);
 }
 

@@ -4,8 +4,6 @@
 #include "fstring.h" /* Code Under Test (CUT) */
 #include "et.h" /* ET: embedded test */
 
-#include <string.h> /* memcmp */
-
 void setup(void) {
     /* executed before *every* non-skipped test */
 }
@@ -15,22 +13,20 @@ void teardown(void) {
 }
 
 /* test group --------------------------------------------------------------*/
-TEST_GROUP("fmemcpy") {
+TEST_GROUP("fstrlen") {
 
-TEST("Size = 0 test (passing)") {
-    char buf[5] = "....";
-	char *p = fmemcpy(buf, "hola", 0);
+TEST("string = \"\\0\" test (passing)") {
+	size_t result;
+	result = fstrlen("\0");
 	
-	VERIFY(memcmp(buf, "....", sizeof(buf)) == 0);
-	VERIFY(p == buf);
+	VERIFY(result == 0);
 }
 
-TEST("Size = 2 test (passing)") {
-	char buf[5] = "....";
-	char *p = fmemcpy(buf, "hola", 2);
+TEST("string = \"hola\" test (passing)") {
+	size_t result;
+	result = fstrlen("hola");
 	
-	VERIFY(memcmp(buf, "ho..", sizeof(buf)) == 0);
-	VERIFY(p == buf);
+	VERIFY(result == 4);
 }
 
 }

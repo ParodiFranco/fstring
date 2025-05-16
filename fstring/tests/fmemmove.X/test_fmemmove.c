@@ -19,16 +19,18 @@ TEST_GROUP("fmemmove") {
 
 TEST("dest = src, size = 0 (passing)") {
 	char destsrc[5] = "....";
-	fmemmove(destsrc, destsrc, 0);
+	char *p = fmemmove(destsrc, destsrc, 0);
 	
 	VERIFY(memcmp(destsrc, "....", sizeof(destsrc)) == 0);
+	VERIFY(p == destsrc);
 }
 
 TEST("dest = src, size > 0 (passing)") {
 	char destsrc[5] = "....";
-	fmemmove(destsrc, destsrc, 2);
+	char *p = fmemmove(destsrc, destsrc, 2);
 	
 	VERIFY(memcmp(destsrc, "....", sizeof(destsrc)) == 0);
+	VERIFY(p == destsrc);
 }
 
 TEST("dest > src, size = 0 (passing)") {
@@ -36,9 +38,10 @@ TEST("dest > src, size = 0 (passing)") {
 	const char offset = 2;
 	char *dest = &buf[offset];
 	char *src = &buf[0];
-	fmemmove(dest, src, 0);
+	char *p = fmemmove(dest, src, 0);
 	
 	VERIFY(memcmp(buf, "hola", sizeof(buf) - offset) == 0);
+	VERIFY(p == dest);
 }
 
 TEST("dest > src, size > 0 (passing)") {
@@ -46,9 +49,10 @@ TEST("dest > src, size > 0 (passing)") {
 	const size_t offset = 2;
 	char *dest = &buf[offset];
 	char *src = &buf[0];
-	fmemmove(dest, src, 2);
+	char *p = fmemmove(dest, src, 2);
 	
 	VERIFY(memcmp(buf, "hoho", sizeof(buf) - offset) == 0);
+	VERIFY(p == dest);
 }
 
 TEST("dest < src, size = 0 (passing)") {
@@ -56,9 +60,10 @@ TEST("dest < src, size = 0 (passing)") {
 	const size_t offset = 2;
 	char *dest = &buf[0];
 	char *src = &buf[offset];
-	fmemmove(dest, src, 0);
+	char *p = fmemmove(dest, src, 0);
 	
 	VERIFY(memcmp(buf, "hola", sizeof(buf) - offset) == 0);
+	VERIFY(p == dest);
 }
 
 TEST("dest < src, size > 0 (passing)") {
@@ -66,9 +71,10 @@ TEST("dest < src, size > 0 (passing)") {
 	const size_t offset = 2;
 	char *dest = &buf[0];
 	char *src = &buf[offset];
-	fmemmove(dest, src, 2);
+	char *p = fmemmove(dest, src, 2);
 	
 	VERIFY(memcmp(buf, "lala", sizeof(buf) - offset) == 0);
+	VERIFY(p == dest);
 }
 
 } /* TEST_GROUP() */
